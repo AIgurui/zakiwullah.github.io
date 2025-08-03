@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaki Ullah | AI & Global Strategy</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-effect {
+            background: rgba(17, 24, 39, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #38bdf8; /* light blue */
+            border: 4px solid #1e293b; /* slate-800 */
+        }
+        .timeline-path {
+            position: absolute;
+            left: -21px;
+            top: 10px;
+            bottom: -10px;
+            width: 2px;
+            background-color: #334155; /* slate-700 */
+        }
+        /* Animation for elements on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Typing animation styles */
+        #animated-text-container {
+            display: inline;
+        }
+        #animated-text {
+            border-right: .15em solid #38bdf8; /* The cursor */
+            animation: blink-caret .75s step-end infinite;
+        }
+        @keyframes blink-caret {
+          from, to { border-color: transparent }
+          50% { border-color: #38bdf8; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Zaki Ullah (Zak)</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#journey" class="hover:text-sky-400 transition-colors duration-300">My Journey</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300">Experience</a>
+                <a href="#education" class="hover:text-sky-400 transition-colors duration-300">Education</a>
+                <a href="#ai" class="hover:text-sky-400 transition-colors duration-300">AI Focus</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2">
+            <a href="#journey" class="block hover:text-sky-400 transition-colors duration-300">My Journey</a>
+            <a href="#experience" class="block hover:text-sky-400 transition-colors duration-300">Experience</a>
+            <a href="#education" class="block hover:text-sky-400 transition-colors duration-300">Education</a>
+            <a href="#ai" class="block hover:text-sky-400 transition-colors duration-300">AI Focus</a>
+            <a href="#contact" class="block hover:text-sky-400 transition-colors duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="container mx-auto px-6 py-16 md:py-20">
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-3">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        From Global Markets<br>to <span id="animated-text-container" class="text-sky-400"><span id="animated-text"></span></span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-300 max-w-2xl">
+                        A journey across continents and industries, now focused on leveraging AI to drive business transformation and sustainable growth.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <div class="bg-sky-500 text-white font-bold py-3 px-6 rounded-lg">
+                            zaki@aya.yale.edu
+                        </div>
+                        <a href="https://www.linkedin.com/in/zaki-ullah-/" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 flex justify-center">
+                    <img src="http://googleusercontent.com/file_content/6" alt="Zaki Ullah" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-slate-700 shadow-2xl shadow-sky-500/10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Timeline Section -->
+        <section id="journey" class="py-16 md:py-24 bg-black/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">A Global Journey</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">My path has been shaped by diverse cultures and environments, fostering a unique global perspective.</p>
+                </div>
+                
+                <div class="relative max-w-2xl mx-auto pl-10">
+                    <div class="timeline-path"></div>
+                    
+                    <!-- Timeline Items -->
+                    <div class="relative mb-12 fade-in-section timeline-item"><h3 class="text-xl font-bold text-sky-400">Manchester, UK & South Asia</h3><p class="text-sm text-slate-400 mb-2">Early Years</p><p class="text-slate-300">Born in the UK with roots in South Asia, my early life was a blend of cultures, instilling a deep appreciation for diversity from the start.</p></div>
+                    <div class="relative mb-12 fade-in-section timeline-item"><h3 class="text-xl font-bold text-sky-400">Dubai, UAE</h3><p class="text-sm text-slate-400 mb-2">Growth & Development</p><p class="text-slate-300">Living in a global hub like Dubai broadened my horizons, exposing me to international business and a fast-paced, innovative environment.</p></div>
+                    <div class="relative mb-12 fade-in-section timeline-item"><h3 class="text-xl font-bold text-sky-400">Singapore</h3><p class="text-sm text-slate-400 mb-2">Higher Education</p><p class="text-slate-300">Awarded a full-ride scholarship to study at Yale-NUS College, a unique liberal arts institution established by Yale and the National University of Singapore.</p></div>
+                    <div class="relative mb-12 fade-in-section timeline-item"><h3 class="text-xl font-bold text-sky-400">The Spark of AI</h3><p class="text-sm text-slate-400 mb-2">Career Beginnings in Sales</p><p class="text-slate-300">My professional journey began in sales, with the grit of cold calling. This experience sparked my interest in efficiency, communication, and how technology—specifically AI—could revolutionize these processes.</p></div>
+                    <div class="relative fade-in-section timeline-item"><h3 class="text-xl font-bold text-sky-400">London, UK</h3><p class="text-sm text-slate-400 mb-2">Present - AI & Business Transformation</p><p class="text-slate-300">Now based in London, I'm at the forefront of AI transformation, leading initiatives in international commodities trading and business development, driving growth through intelligent solutions.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Professional Experience</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">A snapshot of my career, blending international trade with cutting-edge technology.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Job 1 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section"><h3 class="text-xl font-bold text-white">Global BDM</h3><p class="text-sky-400">Montage Oil & Integris Chemical</p><p class="text-sm text-slate-400 mt-1">May 2024 - Present</p><p class="text-slate-300 mt-4">Leading key AI transformation initiatives and spearheading business expansion across Africa and APAC to drive market expansion and profitable growth.</p></div>
+                    <!-- Job 2 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section" style="transition-delay: 100ms;"><h3 class="text-xl font-bold text-white">Business Development Manager</h3><p class="text-sky-400">FiscalNote (NYSE: NOTE)</p><p class="text-sm text-slate-400 mt-1">Apr 2023 - Apr 2024</p><p class="text-slate-300 mt-4">Promoted after 10 months by consistently exceeding sales targets, achieving up to 235% of quota and generating over $200K in new ARR.</p></div>
+                    <!-- Job 3 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section" style="transition-delay: 200ms;"><h3 class="text-xl font-bold text-white">Sustainability Consultant</h3><p class="text-sky-400">Deloitte</p><p class="text-sm text-slate-400 mt-1">Jan 2022 - Jun 2022</p><p class="text-slate-300 mt-4">Contributed to Singapore's Smart Nation AI framework, advised clients like UBS and Nespresso on GTM strategy, and authored sustainability publications.</p></div>
+                     <!-- Job 4 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section" style="transition-delay: 300ms;"><h3 class="text-xl font-bold text-white">Trading Intern</h3><p class="text-sky-400">Kempar Energy Pte. Ltd</p><p class="text-sm text-slate-400 mt-1">May 2021 - Jul 2021</p><p class="text-slate-300 mt-4">Coordinated commodity buying, sourced new suppliers to increase margins by over 3%, and achieved 120% of sales targets through cold calling.</p></div>
+                </div>
+                
+                <div class="text-center mt-12 fade-in-section">
+                     <a href="https://www.linkedin.com/in/zaki-ullah-/" target="_blank" class="text-sky-400 hover:text-sky-300 font-semibold">
+                        View Full CV on LinkedIn &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="py-16 md:py-24 bg-black/20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 fade-in-section">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Education & Achievements</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">Grounded in a rigorous academic foundation with a focus on interdisciplinary analysis.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Education 1 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section">
+                        <h3 class="text-xl font-bold text-white">Yale-NUS College</h3>
+                        <p class="text-sky-400">Full Scholarship Recipient</p>
+                        <p class="text-slate-300 mt-4">Graduated with a Bachelor of Arts (Honours) in Philosophy, Politics, and Economics (PPE) with First Class Honours / Distinction.</p>
+                    </div>
+                    <!-- Education 2 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section" style="transition-delay: 100ms;">
+                        <h3 class="text-xl font-bold text-white">GRE Score</h3>
+                        <p class="text-sky-400">Above 90th Percentile</p>
+                        <p class="text-slate-300 mt-4">Achieved a score of 331 out of 340, demonstrating advanced verbal and quantitative reasoning skills.</p>
+                    </div>
+                    <!-- Education 3 -->
+                    <div class="glass-effect p-6 rounded-lg fade-in-section" style="transition-delay: 200ms;">
+                        <h3 class="text-xl font-bold text-white">High School Achievements</h3>
+                        <p class="text-sky-400">AP Scholar</p>
+                        <p class="text-slate-300 mt-4">Graduated with an American High School Diploma and received AP Scholar awards for high performance in advanced placement coursework.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AI Focus Section -->
+        <section id="ai" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 fade-in-section">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">My Passion for AI</h2>
+                    <p class="text-slate-400 mt-2 max-w-2xl mx-auto">I believe in AI's potential to solve complex problems and create new opportunities.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="glass-effect p-8 rounded-lg"><svg class="w-12 h-12 mx-auto text-sky-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg><h3 class="text-xl font-bold text-white mb-2">Business Transformation</h3><p class="text-slate-300">Using AI to streamline operations, enhance decision-making, and drive growth in established industries.</p></div>
+                    <div class="glass-effect p-8 rounded-lg"><svg class="w-12 h-12 mx-auto text-sky-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM21 21l-5.197-5.197" /></svg><h3 class="text-xl font-bold text-white mb-2">Problem Solving</h3><p class="text-slate-300">Enthusiastic about tackling challenges like climate change and economic development through innovative tech strategies.</p></div>
+                    <div class="glass-effect p-8 rounded-lg"><svg class="w-12 h-12 mx-auto text-sky-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.354a15.056 15.056 0 01-4.5 0m3.75-12.134a15.056 15.056 0 01-4.5 0" /></svg><h3 class="text-xl font-bold text-white mb-2">Future of E-commerce</h3><p class="text-slate-300">Exploring the potential for AI to create smarter, more personalized, and efficient e-commerce experiences globally.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <footer id="contact" class="py-16">
+            <div class="container mx-auto px-6 text-center fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Collaborate</h2>
+                <p class="text-slate-400 mt-3 max-w-xl mx-auto">
+                    I'm always open to discussing new ideas, innovative strategies, or potential collaborations. Feel free to reach out.
+                </p>
+                <div class="mt-8">
+                     <div class="inline-block bg-gray-800 border border-sky-500/50 text-sky-300 font-mono py-4 px-8 rounded-lg text-lg">
+                        zaki@aya.yale.edu
+                    </div>
+                </div>
+                <div class="mt-12 flex justify-center gap-6">
+                    <a href="https://www.linkedin.com/in/zaki-ullah-/" target="_blank" class="text-slate-400 hover:text-sky-400">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-slate-500 mt-12 text-sm">&copy; 2025 Zaki Ullah. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            header.classList.toggle('bg-gray-900/90'); // Add bg on menu open
+        });
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                header.classList.remove('bg-gray-900/90');
+            });
+        });
+
+        // --- Scroll Animation ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // --- Typing Animation for Headline ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "AI.";
+            const animatedTextElement = document.getElementById('animated-text');
+            if (!animatedTextElement) return;
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    animatedTextElement.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 350); // Speed of typing
+                } else {
+                    animatedTextElement.style.borderRight = '.15em solid #38bdf8';
+                    animatedTextElement.style.animation = 'blink-caret .75s step-end infinite';
+                }
+            }
+            setTimeout(typeWriter, 500); 
+        });
+    </script>
+</body>
+</html>
